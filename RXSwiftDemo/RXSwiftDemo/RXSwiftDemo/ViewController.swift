@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view
         _ = btn.rx.tap.subscribe(onNext: { (sender) in
-            
+            self.navigationController?.pushViewController(DQImagePickerController(), animated: true)
         }, onError: { (error) in
             
         }, onCompleted: {
